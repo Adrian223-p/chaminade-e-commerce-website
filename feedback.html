@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Feedback — Griffin Gear | Chaminade School Store</title>
+  <meta name="description" content="Leave a review, rate your products, take our survey, and read what other Griffins are saying." />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo-2.png" alt="Chaminade Griffins logo" />
+        <span><span class="brand-name">Griffin Gear</span><br /><span class="brand-sub">Chaminade School Store</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="privacy.html">Privacy &amp; Security</a></li>
+        <li><a href="order.html">Order Form</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a> / Customer Feedback</p>
+      <h1>Customer Feedback</h1>
+      <p>Tell us how we’re doing! Your reviews help us improve Griffin Gear and serve the Chaminade community better.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Testimonials</p>
+        <h2>What Griffins Are Saying</h2>
+      </div>
+      <div class="grid grid--3">
+        <div class="quote">
+          <p class="stars-static">★★★★★</p>
+          <p>“The varsity jacket is amazing quality and the green is exactly our school colour. I get compliments every spirit day!”</p>
+          <span class="who">— Eduardo O, Grade 11 Student</span>
+        </div>
+        <div class="quote">
+          <p class="stars-static">★★★★★</p>
+          <p>“Ordered water bottles for the whole hockey team. Easy form, fast pickup, and the eagle logo looks sharp.”</p>
+          <span class="who">— Coach Vigilanti, Staff</span>
+        </div>
+        <div class="quote">
+          <p class="stars-static">★★★★☆</p>
+          <p>“Love the patch pack — getting all three logos was such a cool idea. My student put them all over her backpack.”</p>
+          <span class="who">— Ms. Branska, Teacher</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review + rating + survey form -->
+  <section class="section">
+    <div class="container" style="max-width:820px;">
+
+      <div id="feedbackSuccess" class="alert alert--ok hidden">
+        ✅ Thank you for your feedback! Your review and survey responses have been submitted. We read every one. 💚💛
+      </div>
+
+      <form id="feedbackForm" class="form" novalidate>
+        <h2 style="margin-top:0;">Leave a Review</h2>
+        <p class="form-note">Fields marked <span class="req">*</span> are required.</p>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="fbname">Your Name <span class="req">*</span></label>
+            <input type="text" id="fbname" name="fbname" placeholder="e.g. Jordan Lee" required />
+          </div>
+          <div class="field">
+            <label for="fbrole">I am a… <span class="req">*</span></label>
+            <select id="fbrole" name="fbrole" required>
+              <option value="">— Select —</option>
+              <option>Student</option><option>Staff / Teacher</option>
+              <option>Parent</option><option>Alumni</option><option>Community Member</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="fbproduct">Product Reviewed</label>
+            <select id="fbproduct" name="fbproduct">
+              <option value="">— Choose a product —</option>
+              <option>Griffins T-Shirt</option>
+              <option>Crewneck Sweater</option>
+              <option>Varsity Jacket</option>
+              <option>Jogging Pants</option>
+              <option>Athletic Shorts</option>
+              <option>Griffins Crew Socks</option>
+              <option>Baseball Hat</option>
+              <option>Stainless Water Bottle</option>
+              <option>Griffin Key Chain</option>
+              <option>Griffins Phone Case</option>
+              <option>Griffins Backpack</option>
+              <option>Embroidered Patch Pack</option>
+              <option>Griffin Notebook</option>
+              <option>Stationery Set</option>
+              <option>Griffins Running Shoes</option>
+              <option>Griffins Football</option>
+              <option>Griffins Basketball</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Product Rating <span class="req">*</span></label>
+            <div class="stars" role="radiogroup" aria-label="Star rating">
+              <input type="radio" id="star5" name="rating" value="5" required /><label for="star5" title="5 stars">★</label>
+              <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">★</label>
+              <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">★</label>
+              <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">★</label>
+              <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">★</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fbreview">Your Review <span class="req">*</span></label>
+          <textarea id="fbreview" name="fbreview" placeholder="Tell us what you thought about the product and your shopping experience…" required></textarea>
+        </div>
+
+        <!-- Survey -->
+        <h3 style="margin-bottom:6px;">Quick Survey</h3>
+        <div class="field">
+          <label for="q1">How likely are you to recommend Griffin Gear to a friend?</label>
+          <select id="q1" name="recommend">
+            <option value="">— Select —</option>
+            <option>Very likely</option><option>Likely</option>
+            <option>Neutral</option><option>Unlikely</option><option>Very unlikely</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="q2">What product would you like us to add next?</label>
+          <input type="text" id="q2" name="suggestion" placeholder="e.g. toques, scarves, backpacks…" />
+        </div>
+        <div class="field">
+          <label for="q3">How did you hear about our store?</label>
+          <select id="q3" name="source">
+            <option value="">— Select —</option>
+            <option>Friend or classmate</option><option>Teacher / staff</option>
+            <option>School announcement</option><option>Social media</option><option>School website</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn--primary" style="width:100%;font-size:17px;">Submit Feedback</button>
+        <p class="form-note center" style="margin-top:14px;">Your feedback is handled according to our <a href="privacy.html">Privacy &amp; Security policy</a>.</p>
+      </form>
+
+      <p class="center" style="margin-top:30px;"><a class="backhome" href="index.html">← Back to Home</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/img/logo-2.png" alt="Chaminade Griffins logo" />
+            <div><strong style="color:#fff;font-family:var(--serif);font-size:18px;">Griffin Gear</strong><br /><span style="font-size:12px;letter-spacing:2px;color:var(--gold);">CHAMINADE SCHOOL STORE</span></div>
+          </div>
+          <p style="font-size:14px;">The official online store of Chaminade College School. Proudly student-run. Green &amp; Gold forever. 💚💛</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="products.html">All Products</a>
+          <a href="order.html">Order Form</a>
+          <a href="feedback.html">Customer Feedback</a>
+        </div>
+        <div>
+          <h4>Store Info</h4>
+          <a href="about.html">About the Store</a>
+          <a href="privacy.html">Privacy &amp; Security</a>
+          <a href="about.html">Contact &amp; Hours</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Griffin Gear — Chaminade College School Store. A Grade 11 Entrepreneurship ISU project.</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
