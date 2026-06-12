@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Form | Griffin Gear | Chaminade School Store</title>
+  <meta name="description" content="Place your Griffin Gear order online: choose a product, quantity and payment option." />
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo-2.png" alt="Chaminade Griffins logo" />
+        <span><span class="brand-name">Griffin Gear</span><br /><span class="brand-sub">Chaminade School Store</span></span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="privacy.html">Privacy &amp; Security</a></li>
+        <li><a href="order.html" class="active">Order Form</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a> / Order Form</p>
+      <h1>Place Your Order</h1>
+      <p>Fill out the form below to reserve your Griffin Gear. Pay and pick up at the school store during business hours.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:760px;">
+
+      <div id="orderSuccess" class="alert alert--ok hidden">
+        ✅ Thank you! Your order has been received. We’ll email a confirmation and let you know when it’s ready for pickup at the school store.
+      </div>
+
+      <form id="orderForm" class="form" novalidate>
+        <h2 style="margin-top:0;">Order Details</h2>
+        <p class="form-note">Fields marked <span class="req">*</span> are required.</p>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="fullname">Customer Name <span class="req">*</span></label>
+            <input type="text" id="fullname" name="fullname" placeholder="e.g. Alex Romero" required />
+          </div>
+          <div class="field">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="product">Product Selection <span class="req">*</span></label>
+            <select id="product" name="product" required>
+              <option value="" data-price="0">Choose a product</option>
+              <option value="Griffins T-Shirt" data-price="22">Griffins T-Shirt ($22.00)</option>
+              <option value="Crewneck Sweater" data-price="42">Crewneck Sweater ($42.00)</option>
+              <option value="Varsity Jacket" data-price="89">Varsity Jacket ($89.00)</option>
+              <option value="Jogging Pants" data-price="40">Jogging Pants ($40.00)</option>
+              <option value="Athletic Shorts" data-price="26">Athletic Shorts ($26.00)</option>
+              <option value="Griffins Crew Socks" data-price="12">Griffins Crew Socks ($12.00)</option>
+              <option value="Baseball Hat" data-price="24">Baseball Hat ($24.00)</option>
+              <option value="Stainless Water Bottle" data-price="18">Stainless Water Bottle ($18.00)</option>
+              <option value="Griffin Key Chain" data-price="9">Griffin Key Chain ($9.00)</option>
+              <option value="Griffins Phone Case" data-price="20">Griffins Phone Case ($20.00)</option>
+              <option value="Griffins Backpack" data-price="55">Griffins Backpack ($55.00)</option>
+              <option value="Embroidered Patch Pack" data-price="15">Embroidered Patch Pack ($15.00)</option>
+              <option value="Griffin Notebook" data-price="14">Griffin Notebook ($14.00)</option>
+              <option value="Stationery Set" data-price="16">Stationery Set ($16.00)</option>
+              <option value="Running Shoes" data-price="74">Griffins Running Shoes ($74.00)</option>
+              <option value="Football" data-price="32">Griffins Football ($32.00)</option>
+              <option value="Griffins Basketball" data-price="34">Griffins Basketball ($34.00)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="size">Size / Option</label>
+            <select id="size" name="size">
+              <option value="">N/A or one size</option>
+              <option>YS</option><option>YM</option><option>YL</option>
+              <option>XS</option><option>S</option><option>M</option>
+              <option>L</option><option>XL</option><option>2XL</option><option>3XL</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="quantity">Quantity <span class="req">*</span></label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1" required />
+          </div>
+          <div class="field">
+            <label for="payment">Payment Option <span class="req">*</span></label>
+            <select id="payment" name="payment" required>
+              <option value="">Choose a payment method</option>
+              <option value="Cash">Cash (in person)</option>
+              <option value="Debit">Debit (in person)</option>
+              <option value="Cash Online">Cash Online (e-transfer)</option>
+              <option value="Student Account">Charge to Student Account</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">Notes (optional)</label>
+          <textarea id="notes" name="notes" placeholder="Custom name for a varsity jacket, colour preference, pickup time, etc."></textarea>
+        </div>
+
+        <div class="panel" style="display:flex;align-items:center;justify-content:space-between;margin:6px 0 22px;">
+          <span style="font-weight:700;color:var(--green-dark);">Estimated Total</span>
+          <span id="orderTotal" class="price" style="font-size:26px;">$0.00</span>
+        </div>
+
+        <button type="submit" class="btn btn--primary" style="width:100%;font-size:17px;">Submit Order</button>
+        <p class="form-note center" style="margin-top:14px;">By submitting, you agree to our <a href="privacy.html">Privacy &amp; Security policy</a>. No payment is taken online. You pay at pickup.</p>
+      </form>
+
+      <p class="center" style="margin-top:30px;"><a class="backhome" href="index.html">← Back to Home</a></p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="assets/img/logo-2.png" alt="Chaminade Griffins logo" />
+            <div><strong style="color:#fff;font-family:var(--serif);font-size:18px;">Griffin Gear</strong><br /><span style="font-size:12px;letter-spacing:2px;color:var(--gold);">CHAMINADE SCHOOL STORE</span></div>
+          </div>
+          <p style="font-size:14px;">The official online store of Chaminade College School. Proudly student-run. Green &amp; Gold forever. 💚💛</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="products.html">All Products</a>
+          <a href="order.html">Order Form</a>
+          <a href="feedback.html">Customer Feedback</a>
+        </div>
+        <div>
+          <h4>Store Info</h4>
+          <a href="about.html">About the Store</a>
+          <a href="privacy.html">Privacy &amp; Security</a>
+          <a href="about.html">Contact &amp; Hours</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© <span id="year"></span> Griffin Gear, Chaminade College School Store.</div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
